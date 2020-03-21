@@ -7,19 +7,19 @@
 package stack;
 
 public class Node {
-    private int data;
+    private Character data;
     private Node next;
 
-    public Node(int data) {
+    public Node(Character data) {
         this.data = data;
         next = null;
     }
 
-    public int getData() {
+    public Character getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(Character data) {
         this.data = data;
     }
 
