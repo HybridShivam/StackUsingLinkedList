@@ -8,7 +8,7 @@ package stack;
 
 public class MyStack {
     //top of stack
-    Node head;
+    public Node head;
     //number of elements in stack
     int size;
 
@@ -25,7 +25,7 @@ public class MyStack {
         return response;
     }
     // insert at beginning
-    public void push(int element){
+    public void push(Character element){
         Node node = new Node(element);
         node.setNext(head);
         head = node;
@@ -54,7 +54,7 @@ public class MyStack {
             response = head;
         }
         else{
-            System.out.println("stack under flow");
+            System.out.println("stack underflow");
         }
         return  response;
     }
