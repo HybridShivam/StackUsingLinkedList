@@ -14,20 +14,24 @@ import java.util.Random;
 public class MyImplementation {
     public static void main(String[] args) {
         MyStack stack = new MyStack();
-        stack.peek();
-        stack.pop();
-        System.out.println("Size of stack = "+stack.size());
-        stack.push(23);
+        stack.peek();//stack underflow
+        stack.pop();//stack underflow
+        System.out.println("Size of stack = "+stack.size());//Size of stack = 0
+        System.out.println("Head = "+stack.head);
+        stack.push('A');
+        System.out.println("Head = "+stack.head.getData());
         Node element = stack.peek();
-        System.out.println(element.getData());
+        System.out.println("Peek: "+element.getData());
         System.out.println("Size of stack = "+stack.size());
 
-        for (int i = 0; i <100 ; i++) {
-            stack.push(new Random().nextInt(100));
-
+        for (int i = 66; i <91 ; i++) {
+            //stack.push((char)new Random().nextInt(100));
+            stack.push((char)i);
+            System.out.println("Head = "+stack.head.getData());
         }
         System.out.println("Size of stack = "+stack.size());
-        for (int i = 0; i <180 ; i++) {
+        System.out.println("Now Popping !!!");
+        for (int i = 0; i <26 ; i++) {
             Node deleted = stack.pop();
             if(deleted !=null)
             System.out.print(deleted.getData() + ",");
